@@ -1,0 +1,15 @@
+let contadorRuim = 0;
+let contador = 0;
+
+while (contador < 4) {
+let avaliacao = prompt("Qual a sua avaliação para a série 'Stranger Things'? (ruim, bom, excelente)");
+
+if (avaliacao === "ruim") {
+contadorRuim++;
+}
+
+contador++;
+
+}
+
+console.log("Número de pessoas que classificaram a série como 'ruim': " + contadorRuim);
