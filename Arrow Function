@@ -1,0 +1,19 @@
+
+let calcularMedia = (numeros) => { 
+    if (numeros.length === 0) {
+        return 0
+    }
+
+
+let soma = numeros.reduce((acumulador, elemento)=> acumulador + elemento, 0);
+let media = soma / numeros.length;
+return media
+};
+
+const numero = [10, 20, 30, 40, 50];
+const media = calcularMedia(numero);
+
+console.log(`A média dos números é: ${media}`)
+
+
+
