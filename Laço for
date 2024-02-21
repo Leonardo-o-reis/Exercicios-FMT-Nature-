@@ -1,0 +1,28 @@
+const prompt = require("prompt-sync")();
+let comprar;
+let itens = {};
+ do {
+    let mercado = prompt("Escolha o mercado: ")
+    switch(mercado) {   
+        case "Hortifruti":
+        case "Laticínios":
+        case "Carnes":
+        case "Peixes":
+        case "Aves":
+            comprar = prompt("Escolha a quantidade: ")
+            itens[mercado] = (itens[mercado] || 0 ) + Number(comprar);
+            break;
+        case "Fechar-pedido":
+            console.log("Seu pedido foi finalizado!") 
+            comprar = 0;
+            break;
+        default:
+        console.log("Seleção invalida!")
+        break;  } 
+    } while (comprar === undefined);
+        if (comprar === 0) {
+            console.log("Vazio")
+        } else {
+        let itemMaisComprado = Object.keys(itens).reduce((a, b) => itens[a] > itens[b] ? a : b);
+            console.log(`O item mais comprado foi ${itemMaisComprado} com ${itens[itemMaisComprado]} itens.`);
+        }s
