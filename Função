@@ -1,0 +1,11 @@
+function parimp (n) {
+    if (n%2==0) {
+        return "Par!"
+    } else {
+        return "Ímpar!"
+    }
+}
+//número ímpar
+console.log(parimp(11))
+//número par
+console.log(parimp(2))
