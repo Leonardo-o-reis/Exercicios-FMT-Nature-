@@ -1,0 +1,7 @@
+function adicao(num1, num2, callback) {
+    let soma = num1 + num2;
+    callback(soma);
+    }
+    adicao(5, 3, function(resultado) {
+    console.log("O resultado da soma é: " + resultado);
+    });
